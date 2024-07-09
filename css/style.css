@@ -1,0 +1,231 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap);
+
+:root{
+    --color_primario: #F3F5FC;
+    --color_secundario: #FFFFFF;
+    --color_terceario: #0A3871;
+    --color_cuarteario: #495057;
+
+    --fuente_primaria: 'Inter', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    box-sizing: border-box;
+    padding: 2.5rem;
+    background-color: var(--color_primario);
+    font-family: var(--fuente_primaria);
+    margin: 2.5rem;
+}
+
+.panel__principal__logo{
+    width: 120px;
+    height: 48px;
+    
+}
+
+.panel__principal__contenido{
+    display: flex;
+    margin-left: 7.5rem;
+    margin-top: 5rem;
+    gap: 5rem;
+}
+
+.panel__principal__contenido__input{
+    width: 100%;
+}
+
+.panel__principal__contenido__input__area{
+    width: 100%;
+    height: 37.5rem;
+}
+
+.input__textArea{
+    width: 25rem;
+    height: 96%;
+    border: none;
+    resize: none;
+    outline: none;
+    background-color: var(--color_primario);
+    color: var(--color_terceario);
+    font-size: 1.5rem;
+    font-family: var(--fuente_primaria);
+}
+
+.input__textArea__informacion{
+    display: flex;
+    gap: 0.5rem;
+    color: var(--color_cuarteario);
+    font-size: 0.75rem;
+    
+}
+
+
+
+.input__textArea__botones{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.textArea__boton{
+    width: 100%;
+    height: 3rem;
+    border-style: solid;
+    border-color: var(--color_terceario);
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-family: var(--color_primario);
+    cursor: pointer;
+    color: var(--color_terceario);
+    margin-top: 0.5rem;
+
+    
+}
+
+
+#botonEncriptar{
+    background-color: var(--color_terceario);
+    color: var(--color_secundario);
+}
+
+.panel__principal__contenido__output{
+    background-color: var(--color_secundario);
+    width: 35%;
+    margin-right: 3rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.output__area{
+    width: 20rem;
+    height: 37.5rem;
+    
+}
+.output__area__muneco{
+    text-align: center;
+}
+
+.output__area__muneco h2{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.output__area__muneco__img{
+    margin-top: 5.5rem;
+    width: 15rem;
+    height: 15rem;
+}
+
+.output__textArea{
+    width: 100%;
+    height: 94%;
+    border: none;
+    resize: none;
+    outline: none;
+    background-color: var(--color_secundario);
+    color: var(--color_cuarteario);
+    font-size: 1.5rem;
+    font-family: var(--fuente_primaria);
+    display: none;
+}
+
+#botonCopiar{
+    display: none;
+    background-color: var(--color_secundario);
+    
+}
+
+
+@media screen and (max-width: 1300px) {
+    .panel__principal__contenido{
+        flex-direction: column;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        
+    }
+
+    .output__area__muneco__img{
+        display: none;
+    }
+
+    .panel__principal__contenido__input{
+        width: 98%;
+    }
+    .input__textArea{
+        width: 100%;
+    }
+    .input__textArea__informacion{
+        height: 1.5rem;
+        font-size: 1.4rem;
+    }
+    .panel__principal__contenido__output{
+        width: 90%;
+        margin-top: 2.5rem;
+    }
+
+    .textArea__boton{
+        height: 4.5rem;
+        border-radius: 3.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .output__area{
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        height: 20rem;
+        box-sizing: border-box;
+        overflow-y: auto;
+        width: 100%;
+    }
+
+    #botonCopiar{
+        height: 6rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 700px) {
+   body{
+    margin: 0.5rem;
+    padding: 0.5rem;
+   }    
+
+   .panel__principal{
+    display: flex;
+    flex-direction: column;
+   }
+
+   .panel__principal__contenido__input__area{
+    width: 100%;
+    height: 16rem;
+    
+   }
+
+   .input__textArea__botones{
+    flex-direction: column;
+    gap: 0;
+    margin-top: 1rem;
+   }
+
+   .panel__principal__contenido__output{
+    height: 10rem;
+    width: 80%;
+    margin-top: 10rem;
+   }
+
+   .output__area{
+    height: 9.5rem;
+   }
+
+   #botonCopiar{
+
+   }
+}

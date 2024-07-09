@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Linkeamos nuestros estilos css para el proyecto-->
+    <link rel="stylesheet" href="./css/style.css">
+
+        <!--Asignamos un titulo a nuestra pagina-->
+    <title>Encriptador de texto</title>
+
+</head>
+<body>
+    <!--Aqui Comienza el cuerpo de nuestro Proyecto de Encriptador de textos y asignamos clases para llamar a nuestras etiquetas en el
+    css y usamos Id para llamarlos en el script-->
+    <div class="panel__principal">
+
+        <!--En esta parte agregamos un div donde tendremos nuestro logo-->
+            <div class="panel__principal__logo">
+                <img src="./assets/img/Logo-2.png" alt="">
+            </div>
+            <!--Aca comienza nuesto primer plano, donde tendremos el input de entrada al texto que querramos comprimir o descomprimir-->
+            <div class="panel__principal__contenido">
+                    <section class="panel__principal__contenido__input">
+                        <div class="panel__principal__contenido__input__area">
+                            <!--Por esta parte podemos vizualizar el text area donde podemos ingresar el texto deseado-->
+                                <textarea id="input__textArea" class="input__textArea" cols="20 " placeholder="Ingresa tu texto aquí"></textarea>
+
+                                <div class="input__textArea__informacion">
+                                    <img src="./assets/img/bi_exclamation-circle-fill.png" alt="">
+                                    <p>Solo letras minusculas y sin acentos</p>
+                                </div>
+
+                                <div class="input__textArea__botones">
+                                    <!--Los botones que le asignamos id para luego darles funcionalidad en nuestro script-->
+                                    <button id="botonEncriptar" class="textArea__boton">Encriptar</button>
+                                    <button id="botonDesencriptar" class="textArea__boton">Desencriptar</button>
+                                </div>
+
+                        </div>
+
+                    </section>
+                    <!--Aqui dividimos las 2 secciones de uso, la parte donde ingresamos texto y despues donde podemos visualizar ya sea el
+                    texto encriptado o desencriptado.-->
+                    <section class="panel__principal__contenido__output">
+
+                        <div class="output__area">
+                            <textarea id="output__textArea" cols="20" class="output__textArea" readonly></textarea>
+                            <!--El boton copiar que debe aparecer siempre y cuando se muestre un texto en el area.-->
+                            
+                            
+                            <div class="output__area__muneco">
+                                <!--Esta seccion debe ocultarse una vez se muestre un texto, de lo contrario estará para informar que no hay nada por mostrar.-->
+                                <img id="areaMuneco" class="output__area__muneco__img" src="./assets/img/Muñeco.png" alt="">
+                                <h2>Ningun mensaje fue encontrado</h2>
+                                <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+
+                            </div>
+                            <button id="botonCopiar" class="textArea__boton">Copiar</button>
+                        </div>
+
+
+                    </section>
+
+            </div>
+
+
+
+    </div>
+    <!--Parte donde hacemos la conexion entre nuestro script y nuestro html-->
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
